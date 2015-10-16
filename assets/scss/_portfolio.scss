@@ -1,0 +1,93 @@
+// Portfolio
+//
+.section__portfolio {
+  //background-color: #012;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+    @media (min-width:768px) {
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+  }
+}
+.portfolio--item {
+  position: relative;
+  max-width: 480px;
+  margin-bottom: 2rem;
+
+  @media (min-width:768px) {
+    //margin-left: 1rem;
+    //margin-right: 1rem;
+  }
+
+  & + & {
+    //margin-top: 2rem;
+  }
+}
+.portfolio--link {
+  position: relative;
+  display: block;
+
+  &:before,
+  &:after {
+    position: absolute;
+    transition: all 600ms;
+  }
+
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+    background-color: rgba(0,0,0,.4);
+    background: -webkit-linear-gradient(-155deg, rgba(#123,0.3) 0%, rgba(#123,1) 100%);
+    background: -moz-linear-gradient(-155deg, rgba(#123,0.3) 0%, rgba(#123,1) 100%);
+    background: -o-linear-gradient(-155deg, rgba(#123,0.3) 0%, rgba(#123,1) 100%);
+    background: linear-gradient(-155deg, rgba(#123,0.3) 0%, rgba(#123,1) 100%);
+  }
+
+  &:after {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    left: 0;
+    z-index: 2;
+    margin-top: -32px;
+    content: "\f00e";
+    //color: #fff;
+    font-family: FontAwesome;
+    font-size: 64px;
+    text-align: center;
+    line-height: 1;
+  }
+
+  &:hover:before,
+  &:hover:after,
+  &:hover ~ .portfolio--caption {
+    opacity: 0;
+  }
+}
+.portfolio--image {
+  margin: 0 auto;
+}
+.portfolio--caption {
+  //position: absolute;
+  z-index: 9;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  //color: #fff;
+  font-size: 18px;
+  text-transform: uppercase;
+  transition: all 600ms;
+}
+

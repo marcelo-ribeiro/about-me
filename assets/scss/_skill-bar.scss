@@ -1,0 +1,87 @@
+// SkillBar
+//
+.skill_bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  padding: .5em 0;
+  color: $text-color;
+
+  & + & {
+  margin-top: 2rem;
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    height: 1px;
+  }
+
+  &:before {
+    width: 100%;
+    background-color: rgba(#fff, 0.15);
+    //background: linear-gradient(180deg, rgba(#fff, 0.05), rgba(#fff, 0.15));
+  }
+
+  &__html:after {
+    background-color: #e34f26;
+    width: 90%;
+  }
+  &__css:after {
+    background-color: dodgerblue;
+    width: 90%;
+  }
+  &__sass:after {
+    background-color: #c6538c;
+    width: 80%;
+  }
+  &__javascript:after {
+    background-color: goldenrod;
+    width: 60%;
+  }
+  &__angular:after {
+    background-color: #b52e31;
+    width: 50%;
+  }
+  &__jquery:after {
+    background-color: #0769ad;
+    width: 70%;
+  }
+  &__polymer:after {
+    background-color: crimson;
+    width: 50%;
+  }
+  &__grunt:after {
+    background-color: #FBA919;
+    width: 40%;
+  }
+  &__bower:after {
+    background-color: #EF5734;
+    width: 40%;
+  }
+}
+
+.skill_bar--text {
+  position: relative;
+  z-index: 2;
+  padding: 0 1rem;
+  font-size: 1.5rem;
+  line-height: 1;
+}
+
+.skill_bar--percentage {
+  position: relative;
+  z-index: 2;
+  font-size: 1.5rem;
+  line-height: 1;
+  padding: 0 1rem;
+  color: $secondary-text-color;
+}
