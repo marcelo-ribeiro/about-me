@@ -9,7 +9,7 @@ module.exports = function (grunt) {
 
     watch: {
       html: {
-        files: ['**/*.php'],
+        files: ['**/*.html','**/*.php'],
         options: {
           interrupt: true,
           livereload: true,
