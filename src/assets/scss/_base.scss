@@ -1,0 +1,167 @@
+// ================
+// Layout
+// ================
+
+html {
+  font-family: Lato;
+  font-size: 16px;
+  line-height: 1.5rem;
+
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  -ms-text-size-adjust: 100%;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  margin: 0;
+  background: $header-bg-color;
+  color: $text-color;
+  font-weight: 300;
+}
+
+.header {
+  display: flex;
+  // height: 100%;
+  flex-direction: column;
+  // align-items: center;
+  justify-content: center;
+  padding: 3rem 0;
+  //background: $header_bg_color;
+  text-align: center;
+
+  // @media ( min-width: 768px ) {
+  //   height: auto;
+  // }
+}
+
+.nav {
+
+}
+
+.main {
+  
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+
+  .container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
+
+// ================
+// Elements
+// ================
+
+::selection {
+  color: #fff;
+  background: $secondary-color;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 0;
+
+  &:not(:last-child) {
+    margin-bottom: 1rem;
+  }
+}
+
+a {
+  color: $secondary-text-color;
+  text-decoration: none;
+  transition: all 300ms ease-out;
+
+  &:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  &:focus {
+    @extend a:hover;
+  }
+
+  img {
+    display: block;
+  }
+}
+
+figure {
+  margin: 0;
+
+  img {
+    display: block;
+  }
+}
+
+figcaption {
+  @extend p;
+}
+
+img {
+  width: auto;
+  max-width: 100%;
+  height: auto;
+}
+
+.container {
+  //padding: 0 1rem;
+}
+
+.header--title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.75rem;
+  font-weight: 300;
+  letter-spacing: -1.5px;
+  line-height: 1;
+  color: #fff;
+}
+
+.header--sub_title {
+  margin-top: 1rem;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  line-height: 1;
+  letter-spacing: 2px;
+}
+
+.navigation {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.navigation--link {
+  display: flex;
+  align-items: center;
+  height: 3rem;
+  padding: 0 1em;
+  font-weight: 300;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section--header {
+  margin-bottom: 5rem;
+}
+
+.section--title {
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 2.5rem;
+  line-height: 1;
+  text-align: center;
+  font-weight: 300;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: $secondary-text-color;
+}

@@ -1,0 +1,96 @@
+.section__skills {
+  // background: rgba(#fff, 0.15);
+
+  > .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: calc(400px * 3);
+    margin: 0 auto;
+  }
+}
+
+// SkillBar
+//
+.skill_bar {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  max-width: calc(400px - 2rem);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  margin-bottom: 1.5rem;
+  padding: .5em 0;
+  color: $text-color;
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+    height: 100%;
+    height: 2px;
+  }
+
+  &:before {
+    width: 100%;
+    background-color: rgba(#fff, 0.2);
+  }
+
+  &__html:after {
+    background-color: #e34f26;
+    width: 90%;
+  }
+  &__css:after {
+    background-color: dodgerblue;
+    width: 90%;
+  }
+  &__sass:after {
+    background-color: #c6538c;
+    width: 80%;
+  }
+  &__javascript:after {
+    background-color: goldenrod;
+    width: 60%;
+  }
+  &__angular:after {
+    background-color: #b52e31;
+    width: 50%;
+  }
+  &__jquery:after {
+    background-color: #0769ad;
+    width: 70%;
+  }
+  &__polymer:after {
+    background-color: crimson;
+    width: 50%;
+  }
+  &__grunt:after {
+    background-color: #FBA919;
+    width: 40%;
+  }
+  &__bower:after {
+    background-color: #EF5734;
+    width: 70%;
+  }
+}
+
+.skill_bar--text {
+  // position: relative;
+  // z-index: 2;
+  // padding: 0 1rem;
+  font-size: 1.25rem;
+}
+
+.skill_bar--percentage {
+  // position: relative;
+  // z-index: 2;
+  // padding: 0 1rem;
+  font-size: 1.25rem;
+  color: $secondary-text-color;
+}
